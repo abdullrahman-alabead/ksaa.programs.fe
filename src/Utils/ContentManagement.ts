@@ -1,8 +1,9 @@
 import axios from "axios";
+export let api = ''; // https://programs.ksaa.gov.sa/api/
 
 export const fetchGlobalContentDjango = async (locale: string) => {
   try {
-    const response = await axios.get("https://programs.ksaa.gov.sa/api/header-footer/", {
+    const response = await axios.get(`${api}/header-footer/`, {
       headers: {
         "Accept-Language": locale,
       },
@@ -15,7 +16,7 @@ export const fetchGlobalContentDjango = async (locale: string) => {
 
 export const fetchHomepageContentDjango = async (locale: string) => {
   try {
-    const response = await axios.get("https://programs.ksaa.gov.sa/api/homepage/", {
+    const response = await axios.get(`${api}/homepage/`, {
       headers: {
         "Accept-Language": locale,
       },
@@ -28,13 +29,13 @@ export const fetchHomepageContentDjango = async (locale: string) => {
 
 export const fetchFormPageContentDjango = async (locale: string) => {
   try {
-    const formContent = await axios.get("https://programs.ksaa.gov.sa/api/form_page/", {
+    const formContent = await axios.get(`${api}/form_page/`, {
       headers: {
         "Accept-Language": locale,
       },
     });
 
-    const formSections = await axios.get("https://programs.ksaa.gov.sa/api/form_sections/", {
+    const formSections = await axios.get(`${api}/form_sections/`, {
       headers: {
         "Accept-Language": locale,
       },
@@ -51,7 +52,7 @@ export const fetchFormPageContentDjango = async (locale: string) => {
 
 export const createRegisteredUser = async (userInfo: any) => {
   try {
-    const registerationInfo = await axios.post("https://programs.ksaa.gov.sa/register/", userInfo);
+    const registerationInfo = await axios.post(`${api}/register/`, userInfo);
 
     return registerationInfo;
   } catch (err) {
