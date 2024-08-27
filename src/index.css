@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+  .absCenter {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .absCover {
+    @apply absolute top-0 left-0 w-full h-full;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .fixedCenter {
+    @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .coverImage {
+    @apply bg-cover bg-center;
+  }
+
+  .centerH {
+    @apply absolute left-1/2 -translate-x-1/2;
+  }
+
+  .centerV {
+    @apply absolute top-1/2 -translate-y-1/2;
+  }
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  @apply px-[7vw] py-[5rem];
+}
+
+/* Responsive Font Sizes */
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 10.5px;
+  }
+}
+
+.delay1 {
+  transition-delay: 100ms;
+}
+.delay2 {
+  transition-delay: 200ms;
+}
+.delay3 {
+  transition-delay: 300ms;
+}
+.delay4 {
+  transition-delay: 400ms;
+}
+.delay5 {
+  transition-delay: 500ms;
+}
+.delay6 {
+  transition-delay: 600ms;
+}
+.delay7 {
+  transition-delay: 700ms;
+}
+.delay8 {
+  transition-delay: 800ms;
+}
+.delay9 {
+  transition-delay: 900ms;
+}
+.delay10 {
+  transition-delay: 1000ms;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
