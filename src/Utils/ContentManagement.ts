@@ -1,5 +1,5 @@
 import axios from "axios";
-export let api = ''; // https://programs.ksaa.gov.sa/api/
+export let api = '/api'; // https://programs.ksaa.gov.sa/api/
 
 export const fetchGlobalContentDjango = async (locale: string) => {
   try {
