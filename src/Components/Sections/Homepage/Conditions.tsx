@@ -6,7 +6,7 @@ import LocalizedLink from "Components/Common/LocalizedLink";
 import { useInView } from "react-intersection-observer";
 const Conditions = (ConditionsContent: ConditionsSection) => {
   const { conditionsHeadline, registerButtonLink, registerButtonText, conditions } = ConditionsContent;
-  const [ref, inView] = useInView({ rootMargin: "-200px" });
+  const [ref, inView] = useInView({ rootMargin: "-200px", fallbackInView: true });
   return (
     <section ref={ref} id="conditions" className={"flex flex-col items-center bg-black opacity-90"}>
       <h2

@@ -4,7 +4,7 @@ import { JobsSection } from "Types/HomepageTypes.ts";
 
 const Jobs = (JobsContent: JobsSection) => {
   const { jobsHeadline, jobsImage, jobsText } = JobsContent;
-  const [ref, inView] = useInView({ rootMargin: "-100px" });
+  const [ref, inView] = useInView({ rootMargin: "-100px", fallbackInView: true });
   return (
     <section id="jobs" className={"flex flex-row items-center gap-7 tab:flex-col"} ref={ref}>
       <div className="w-4/10 tab:w-full relative z-10 after:absCover after:bg-green after:opacity-80 after:-z-10 flexCenter aspect-video rounded-lg overflow-hidden">

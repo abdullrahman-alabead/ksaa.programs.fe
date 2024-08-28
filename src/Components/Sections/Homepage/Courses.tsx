@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const Courses = (CoursesContent: CoursesSection) => {
   const { coursesHeadline, courses } = CoursesContent;
-  const [ref, inView] = useInView({ rootMargin: "-200px" });
+  const [ref, inView] = useInView({ rootMargin: "-200px", fallbackInView: true });
   return (
     <section id="courses" className={"flex flex-col items-center"} ref={ref}>
       <h2

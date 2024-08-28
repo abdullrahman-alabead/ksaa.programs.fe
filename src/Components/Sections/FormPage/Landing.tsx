@@ -4,7 +4,7 @@ import { LandingSection } from "Types/FormTypes";
 
 const Landing = (LandingContent: LandingSection) => {
   const { landingCoverImage, landingHeadline, landingSubheadline } = LandingContent;
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ fallbackInView: true });
   return (
     <section
       className={

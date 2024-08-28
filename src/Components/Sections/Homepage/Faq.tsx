@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const Faq = (FaqContent: FaqSection) => {
   const { faqs, faqHeadline } = FaqContent;
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(-1);
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ fallbackInView: true });
   return (
     <section className={"flex flex-col items-center"} ref={ref}>
       <h2

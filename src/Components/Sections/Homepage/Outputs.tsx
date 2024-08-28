@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Outputs = (OutputsContent: OutputsSection) => {
   const { outputsHeadline, outputs, outputsImage } = OutputsContent;
-  const [ref, inView] = useInView({ rootMargin: "-300px" });
+  const [ref, inView] = useInView({ rootMargin: "-300px", fallbackInView: true });
   return (
     <section id="outputs" className={`flex flex-row items-center tab:flex-col tab:gap-8`} ref={ref}>
       <div className="w-1/3 h-[30rem] bg-green relative z-10 after:absCover after:bg-black after:opacity-80 after:-z-10 flexCenter tab:w-full tab:h-auto tab:aspect-video tab:rounded-xl">

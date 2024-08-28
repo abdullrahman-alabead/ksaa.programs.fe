@@ -7,7 +7,7 @@ import "swiper/css";
 
 const Goals = (GoalsContent: GoalsSection) => {
   const { goals, goalsHeadline } = GoalsContent;
-  const [ref, inView] = useInView({ rootMargin: "-200px" });
+  const [ref, inView] = useInView({ rootMargin: "-200px", fallbackInView: true });
 
   return (
     <section

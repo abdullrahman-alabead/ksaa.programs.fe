@@ -7,7 +7,7 @@ import { LandingSection } from "Types/HomepageTypes.ts";
 const Landing = (LandingContent: LandingSection) => {
   const { landingHeadline, landingSubheadline, readyText, registerButtonText, registerButtonUrl, landingBackground } =
     LandingContent;
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ fallbackInView: true });
   return (
     <section
       className={

@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Program = (ProgramContent: ProgramSection) => {
   const { programInfo } = ProgramContent;
-  const [ref, inView] = useInView({ rootMargin: "-300px" });
+  const [ref, inView] = useInView({ rootMargin: "-300px", fallbackInView: true });
   return (
     <section className={"flex flex-col items-center"} ref={ref}>
       {programInfo.map(({ icon, infoLabel, infoText }, i) => {
