@@ -18,6 +18,7 @@ const FormPage = () => {
         failedText={formPageData.failedText}
         inProgressText={formPageData.inProgressText}
         successText={formPageData.successText}
+        missinText={formPageData.missinText}
       />
     </div>
   );

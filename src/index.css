@@ -128,3 +128,41 @@ section {
     transform: rotate(1turn);
   }
 }
+
+input[type="date"] {
+  display: inline-block;
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+input:user-invalid {
+  border-color: red !important;
+}
+
+.placeholder:has(input:user-invalid) {
+  border-color: red !important;
+}
+
+input.placeholder:user-invalid {
+  border-color: red !important;
+}
+
+input:user-invalid ~ .placeholder {
+  border-color: red !important;
+}
+
+.placeholder:has(input[type="file"]:invalid) {
+  border-color: red !important;
+}

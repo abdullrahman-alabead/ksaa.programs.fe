@@ -5,7 +5,7 @@ const RadioInput = ({ choices, inputLabel, name }: { inputLabel: string; name: s
   return (
     <div className="mb-6">
       <p className="mb-2 text-green">{inputLabel}</p>
-      <div className="w-full px-4 py-3 border-[1.5px] border-green rounded-lg focus:outline-none flex items-center gap-12">
+      <div className="placeholder w-full px-4 py-3 border-[1.5px] border-green rounded-lg focus:outline-none flex items-center gap-12">
         {choices.map((choice, i) => {
           return (
             <div key={i} className="flex items-center gap-4">

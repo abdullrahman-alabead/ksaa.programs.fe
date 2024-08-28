@@ -10,6 +10,7 @@ export interface FormFields {
 }
 export interface FormSection {
   headline: string;
+  note?: string;
   formFields: FormFields[];
 }
 
@@ -20,4 +21,5 @@ export interface FormSectionData {
   inProgressText: string;
   successText: string;
   failedText: string;
+  missinText: string;
 }
